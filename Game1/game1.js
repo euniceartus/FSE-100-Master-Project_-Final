@@ -1,7 +1,6 @@
-let owlImage;
+
 
 function game1Preload(){
-  owlImage = loadImage("Game1/owlCarving.jpg");
 }
 
 function game1Setup(){
