@@ -12,31 +12,28 @@ let playerX;
 let playerY;
 
 function game4Preload(){
+
 }
-  function game4Setup() {
-    createCanvas(400, 400);
-    textAlign(CENTER, CENTER);
-    currentActivity = 4;
-    background("#fadac1");
-    let mazeWidth = maze[0].length * cellSize;
-    let mazeHeight = maze.length * cellSize;
-    let offsetX = (width - mazeWidth) / 2;
-    let offsetY = (height - mazeHeight) / 2;
-
-    playerX = offsetX + cellSize / 2;
-    playerY = offsetY + cellSize / 2;
 
 
+function game4Setup() {
+  createCanvas(750, 400);
 
- 
+  currentActivity = 4;
 
-  
+  let mazeWidth = maze[0].length * cellSize;
+  let mazeHeight = maze.length * cellSize;
+  let offsetX = (width - mazeWidth) / 2;
+  let offsetY = (height - mazeHeight) / 2;
+
+  playerX = offsetX + cellSize / 2;
+  playerY = offsetY + cellSize / 2;
   // Hide the Activity 4 button, show all the other buttons
-  menuButton.show();
-  game1Button.show();
-  game2Button.show();
-  game3Button.show();
-  game4Button.hide();
+  // menuButton.show();
+  // game1Button.show();
+  // game2Button.show();
+  // game3Button.show();
+  // game4Button.hide();
 }
 
 function game4Draw(){
@@ -44,28 +41,35 @@ function game4Draw(){
   
   drawMaze();
   drawPlayer();
+  text("(" + mouseX + ", " + mouseY + ")", 360, 380);
+
 
   fill("#fadac1");
-  rect(10, 10, 100, 25);
   fill("black");
-  text("Home Page", 25, 25);
+  text("Home Page", 350, 25);
+
+  fill("#50A3AB");
+  ellipse(75, 50, 90, 35, 6);
+  textSize(15);
+  fill("Black");
+  textFont(mont);
+  text("Back",51,55);
 }
   
-  function drawMaze() {
+function drawMaze() {
+  let mazeWidth = maze[0].length * cellSize;
+  let mazeHeight = maze.length * cellSize;
+  let offsetX = (width - mazeWidth) / 2;
+  let offsetY = (height - mazeHeight) / 2;
 
-    let mazeWidth = maze[0].length * cellSize;
-    let mazeHeight = maze.length * cellSize;
-    let offsetX = (width - mazeWidth) / 2;
-    let offsetY = (height - mazeHeight) / 2;
-
-    for (let i = 0; i < maze.length; i++) {
-        for (let j = 0; j < maze[i].length; j++) {
-            if (maze[i][j] === 1) {
-                fill(255);
-                rect(offsetX + j * cellSize, offsetY + i * cellSize, cellSize, cellSize);
-            }
-        }
-    }
+  for (let i = 0; i < maze.length; i++) {
+      for (let j = 0; j < maze[i].length; j++) {
+          if (maze[i][j] === 1) {
+              fill(255);
+              rect(offsetX + j * cellSize, offsetY + i * cellSize, cellSize, cellSize);
+          }
+      }
+  }
 }
 
 function drawPlayer() {
@@ -74,15 +78,14 @@ function drawPlayer() {
 }
 
 function mouseMoved() {
-    
-    let newX = constrain(mouseX, cellSize / 2, width - cellSize / 2);
-    let newY = constrain(mouseY, cellSize / 2, height - cellSize / 2);
+  let newX = constrain(mouseX, cellSize / 2, width - cellSize / 2);
+  let newY = constrain(mouseY, cellSize / 2, height - cellSize / 2);
 
-    let cellX = floor((newX - (width - maze[0].length * cellSize) / 2) / cellSize);
-    let cellY = floor((newY - (height - maze.length * cellSize) / 2) / cellSize);
+  let cellX = floor((newX - (width - maze[0].length * cellSize) / 2) / cellSize);
+  let cellY = floor((newY - (height - maze.length * cellSize) / 2) / cellSize);
 
-    if (maze[cellY][cellX] === 0) {
-        playerX = newX;
-        playerY = newY;
-    }
+  if (maze[cellY][cellX] === 0) {
+      playerX = newX;
+      playerY = newY;
   }
+}

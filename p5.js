@@ -93001,7 +93001,7 @@
           };
         },
         {}
-      ],
+      ]
       114: [
         function(_dereq_, module, exports) {
           'use strict';

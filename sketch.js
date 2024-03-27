@@ -83,9 +83,7 @@ function menu() {
     fill("white");
     text("Rename",560,225);
   }
-  textSize(15)
-  fill("red")
-  text("screen "+currentScreen, 250 , 360 )
+
 }
 
 
@@ -109,38 +107,43 @@ function draw(){
 }
 
 function page1(){
-  clear();
-  background("purple");
-  textSize(30)
-  text("PAGE 1",150,70);
-  text("BACK", 250 , 360 )
+  // clear();
+  // background("purple");
+  // textSize(30)
+  // text("PAGE 1",150,70);
+  // text("BACK", 250 , 360 )
   game1Preload();
   game1Setup();
   game1Draw();
 }
 
 function page2(){
-  clear();
-  background("green");
-  textSize(30)
-  text("PAGE 2",150,70);
-  text("BACK", 250 , 360 )
+  // clear();
+  // background("green");
+  // textSize(30)
+  // text("PAGE 2",150,70);
+  // text("BACK", 250 , 360 )
+  game2Preload();
+  game2Setup();
+  game2Draw();
 }
 
 function page3(){
-  clear();
-  background("purple");
-  textSize(30)
-  text("PAGE 3",150,70);
-  text("BACK", 250 , 360 )
+  // clear();
+  // background("purple");
+  // textSize(30)
+  // text("PAGE 3",150,70);
+  // text("BACK", 250 , 360 );
+  game3Preload();
+  game3Setup();
+  game3Draw();
    
 }
 function page4(){
-  clear();
-  background("blue");
-  textSize(30)
-  text("PAGE 4",150,70);
-  text("BACK", 250 , 360 )
+  mouseMoved();
+  game4Preload();
+  game4Setup();
+  game4Draw();
    
 }
 
@@ -164,16 +167,17 @@ function mouseClicked() {
   else if (currentScreen == 0 && ((dist(mouseX, mouseY, 617, 173) <= 100) ) ) {
     currentScreen = 4;
   }  
-  if (currentScreen == 1 && dist(mouseX, mouseY, 250, 360) < 100) {
+
+  if (currentScreen == 1 && dist(mouseX, mouseY, 74, 52) < 100) {
     currentScreen = 0;
   }
-  if (currentScreen == 2 && dist(mouseX, mouseY, 250, 360) < 100) {
+  if (currentScreen == 2 && dist(mouseX, mouseY, 74, 52) < 100) {
     currentScreen = 0;
   }
-  if (currentScreen == 3 && dist(mouseX, mouseY, 250, 360) < 100) {
+  if (currentScreen == 3 && dist(mouseX, mouseY, 74, 52) < 100) {
     currentScreen = 0;
   }
-  if (currentScreen == 4 && dist(mouseX, mouseY, 250, 360) < 100) {
+  if (currentScreen == 4 && dist(mouseX, mouseY, 71, 50) < 100) {
     currentScreen = 0;
   }
 }
