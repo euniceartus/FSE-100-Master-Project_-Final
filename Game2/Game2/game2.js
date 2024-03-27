@@ -7,7 +7,7 @@ function game2Preload(){
 
 function setup() {
     createCanvas(400, 400);
-    urrentActivity = 2;
+    currentActivity = 2;
   }
   
   // Hide the Activity 3 button, show all the other buttons
