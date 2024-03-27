@@ -5,24 +5,36 @@ function game1Preload(){
 }
 
 function game1Setup(){
-  background('#fae');
-  currentActivity = 1;
+
+  // currentActivity = 1;
   
   // Hide the Game 1 button, show all the other navigation buttons
-  menuButton.show();
-  game1Button.hide();
-  game2Button.show();
-  game3Button.show();
-  game4Button.show();
+  // menuButton.show();
+  // game1Button.hide();
+  // game2Button.show();
+  // game3Button.show();
+  // game4Button.show();
   
   // Set the size of the owl image
-  owlImage.resize(150, 150);
+  // owlImage.resize(150, 150);
 }
 
 function game1Draw(){
-  background('#fae');
+  clear();
+  background('green');
   
-  fill('black');
-  text('Activity 1 goes here', 200, 200);
-  image(owlImage, 150, 210);
+  textSize(27);
+  fill("black")
+  textStyle(BOLD);
+  text("Activity 1 goes here:",250,50);
+
+  fill("#50A3AB");
+  ellipse(75, 50, 90, 35, 6);
+  textSize(15);
+  fill("Black");
+  textFont(mont);
+  text("Back",51,55);
+  
 }
+
+
