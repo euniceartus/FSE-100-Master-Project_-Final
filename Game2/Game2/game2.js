@@ -29,9 +29,8 @@ function game2Setup(){
 }
 
 function game2Draw(){
-  background('rgba(0,255,0, 0.25)');
   clear();
-  background('red');
+  background("#fadac1");
   
   textSize(27);
   fill("black")
