@@ -1,6 +1,7 @@
-
+let sound1;
 
 function game1Preload(){
+  sound1 = loadSound("sound1.mp3");
 }
 
 function game1Setup(){
