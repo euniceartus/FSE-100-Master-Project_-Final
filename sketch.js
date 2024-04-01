@@ -37,17 +37,17 @@ function menu() {
   fill("#F6723A")
   rect1 = rect(25,100,150,150);
   fill("black");
-  text("Puzzle",40,225);
+  text("Piano",40,225);
 
   fill("#F6723A")
   rect2 = rect(200,100,150,150);
   fill("black");
-  text("Piano",200,225);
+  text("Painting",200,225);
 
   fill("#F6723A")
   rect3 = rect(375,100,150,150);
   fill("black");
-  text("Painting",380,225);
+  text("Puzzle",380,225);
  
   fill("#F6723A")
   rect3 = rect(550,100,150,150);
@@ -59,7 +59,7 @@ function menu() {
     fill("black")
     rect(25,100,150,150);
     fill("white");
-    text("Puzzle",40,225);
+    text("Piano",40,225);
   }
  
   distance(269,175);
@@ -67,14 +67,14 @@ function menu() {
     fill("black")
     rect(200,100,150,150);
     fill("white");
-    text("Piano",200,225);
+    text("Painting",200,225);
   }
   distance(445,174);
   if ( d < 100){
     fill("black")
     rect(375,100,150,150);
     fill("white");
-    text("Painting",380,225);
+    text("Puzzle",380,225);
   }
  
   distance(614,182);
