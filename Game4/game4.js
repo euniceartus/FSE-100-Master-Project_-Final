@@ -11,9 +11,15 @@ let playerSize = 20;
 let playerX;
 let playerY;
 
-function setup() {
-  let canvas = createCanvas(750, 400);
-  canvas.parent('mazeCanvas'); // This will place the canvas inside the 'mazeCanvas' div
+function game4Preload(){
+
+}
+
+
+function game4Setup() {
+  createCanvas(750, 400);
+
+  currentActivity = 4;
 
   let mazeWidth = maze[0].length * cellSize;
   let mazeHeight = maze.length * cellSize;
@@ -22,48 +28,34 @@ function setup() {
 
   playerX = offsetX + cellSize / 2;
   playerY = offsetY + cellSize / 2;
+  // Hide the Activity 4 button, show all the other buttons
+  // menuButton.show();
+  // game1Button.show();
+  // game2Button.show();
+  // game3Button.show();
+  // game4Button.hide();
 }
 
-function draw() {
+function game4Draw(){
   background("#fadac1");
+  
   drawMaze();
   drawPlayer();
+  text("(" + mouseX + ", " + mouseY + ")", 360, 380);
+
+
+  fill("#fadac1");
+  fill("black");
+  text("MAZE GAME", 350, 25);
+
+  fill("#50A3AB");
+  ellipse(75, 50, 90, 35, 6);
+  textSize(15);
+  fill("Black");
+  textFont(mont);
+  text("Back",51,55);
 }
-
-function keyPressed() {
-  let stepSize = 10;
-  let newX = playerX;
-  let newY = playerY;
-
-  if (keyCode === LEFT_ARROW) {
-    newX -= stepSize;
-  } else if (keyCode === RIGHT_ARROW) {
-    newX += stepSize;
-  } else if (keyCode === UP_ARROW) {
-    newY -= stepSize;
-  } else if (keyCode === DOWN_ARROW) {
-    newY += stepSize;
-  }
-
-  checkBoundaryAndMove(newX, newY);
-}
-
-function checkBoundaryAndMove(newX, newY) {
-  let cellX = floor((newX - (width - maze[0].length * cellSize) / 2) / cellSize);
-  let cellY = floor((newY - (height - maze.length * cellSize) / 2) / cellSize);
-
-  if (cellX >= 0 && cellX < maze[0].length && cellY >= 0 && cellY < maze.length && maze[cellY][cellX] === 0) {
-    playerX = newX;
-    playerY = newY;
-  } else {
-    // Reset player to starting position
-    let offsetX = (width - maze[0].length * cellSize) / 2;
-    let offsetY = (height - maze.length * cellSize) / 2;
-    playerX = offsetX + cellSize / 2;
-    playerY = offsetY + cellSize / 2;
-  }
-}
-
+  
 function drawMaze() {
   let mazeWidth = maze[0].length * cellSize;
   let mazeHeight = maze.length * cellSize;
@@ -83,4 +75,17 @@ function drawMaze() {
 function drawPlayer() {
     fill("#50A3AB");
     ellipse(playerX, playerY, playerSize, playerSize);
+}
+
+function mouseMoved() {
+  let newX = constrain(mouseX, cellSize / 2, width - cellSize / 2);
+  let newY = constrain(mouseY, cellSize / 2, height - cellSize / 2);
+
+  let cellX = floor((newX - (width - maze[0].length * cellSize) / 2) / cellSize);
+  let cellY = floor((newY - (height - maze.length * cellSize) / 2) / cellSize);
+
+  if (maze[cellY][cellX] === 0) {
+      playerX = newX;
+      playerY = newY;
+  }
 }
