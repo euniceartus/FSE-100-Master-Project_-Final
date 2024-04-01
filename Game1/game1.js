@@ -21,7 +21,7 @@ function game1Setup(){
 
 function game1Draw(){
   clear();
-  background('green');
+  background("#fadac1");
   
   textSize(27);
   fill("black")

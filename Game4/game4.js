@@ -46,7 +46,7 @@ function game4Draw(){
 
   fill("#fadac1");
   fill("black");
-  text("Home Page", 350, 25);
+  text("MAZE GAME", 350, 25);
 
   fill("#50A3AB");
   ellipse(75, 50, 90, 35, 6);
@@ -73,7 +73,7 @@ function drawMaze() {
 }
 
 function drawPlayer() {
-    fill("red");
+    fill("#50A3AB");
     ellipse(playerX, playerY, playerSize, playerSize);
 }
 

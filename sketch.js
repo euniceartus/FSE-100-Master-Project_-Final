@@ -14,6 +14,7 @@ function menu() {
  
   let radius = 74
   textFont(mont);
+  
 
   background("#FADAC1");
   textSize(15);
@@ -36,29 +37,29 @@ function menu() {
   fill("#F6723A")
   rect1 = rect(25,100,150,150);
   fill("black");
-  text("The Maze",40,225);
+  text("Piano",40,225);
 
   fill("#F6723A")
   rect2 = rect(200,100,150,150);
   fill("black");
-  text("Electronics",200,225);
+  text("Painting",200,225);
 
   fill("#F6723A")
   rect3 = rect(375,100,150,150);
   fill("black");
-  text("Piano Tiles",380,225);
+  text("Puzzle",380,225);
  
   fill("#F6723A")
   rect3 = rect(550,100,150,150);
   fill("black");
-  text("Rename",560,225);
+  text("Maze",560,225);
  
   distance(97,176);
   if ( d < 100){
     fill("black")
     rect(25,100,150,150);
     fill("white");
-    text("The Maze",40,225);
+    text("Piano",40,225);
   }
  
   distance(269,175);
@@ -66,14 +67,14 @@ function menu() {
     fill("black")
     rect(200,100,150,150);
     fill("white");
-    text("Electronics",200,225);
+    text("Painting",200,225);
   }
   distance(445,174);
   if ( d < 100){
     fill("black")
     rect(375,100,150,150);
     fill("white");
-    text("Piano Tiles",380,225);
+    text("Puzzle",380,225);
   }
  
   distance(614,182);
@@ -81,7 +82,7 @@ function menu() {
     fill("black")
     rect(550,100,150,150);
     fill("white");
-    text("Rename",560,225);
+    text("Maze",560,225);
   }
 
 }
@@ -177,7 +178,7 @@ function mouseClicked() {
   if (currentScreen == 3 && dist(mouseX, mouseY, 74, 52) < 100) {
     currentScreen = 0;
   }
-  if (currentScreen == 4 && dist(mouseX, mouseY, 71, 50) < 100) {
+  if (currentScreen == 4 && dist(mouseX, mouseY, 74, 52) < 100) {
     currentScreen = 0;
   }
 }
