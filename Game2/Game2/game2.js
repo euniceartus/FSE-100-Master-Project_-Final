@@ -13,66 +13,36 @@ function game2Draw() {
   clear();
   background("#FADAC1");
 
-  // Drawing canvas
-  fill("white");
-  rect(100, 100, 500, 300);
+fill("white");
+rect(200, 80, 450, 450);
 
-  // Toolbar
-  fill("#e6e6e6");
-  rect(150, 20, 700, 40);
+fill("#50A3AB");
+rect(5, 90, 180, 270);
 
-  // Color palette
-  fill("#50A3AB");
-  rect(150, 25, 30, 30);
-  fill("#F79D84");
-  rect(200, 25, 30, 30);
-  fill("#A8D0E6");
-  rect(250, 25, 30, 30);
-  // Add more color options as needed
+fill("white");
+ellipse(95, 140, 130, 80, 60);
 
-  // Brush size selection
-  fill("#50A3AB");
-  ellipse(650, 100, 20, 20); // Small brush
-  ellipse(677, 100, 30, 30); // Medium brush
-  ellipse(715, 100, 40, 40); // Large brush
 
-  // Tool selection
-  fill("#50A3AB");
-  rect(700, 150, 30, 30); // Pen tool
-  rect(700, 200, 30, 30); // Eraser tool
-  // Add more tools as needed
+fill("white");
+rect(140, 10, 540, 60, 150);
+fill("Black");
+textSize(35);
+textStyle(BOLD);
+text("Finger Painting Game", 200, 50);
 
-  // Text
-  textSize(27);
-  fill("black");
-  textStyle(BOLD);
-  text("Finger Painting Game", 300, 30);
-
-  fill("#50A3AB");
-  ellipse(638, 70, 90, 35, 6);
-  textSize(15);
-  fill("white");
-  textStyle(BOLD);
-  text("Brush Size", 600, 75);
-
-  fill("#50A3AB");
-  ellipse(665, 145, 50, 30, 6);
-  textSize(15);
-  fill("white");
-  textStyle(BOLD);
-  text("Edit", 650, 150);
-
-  fill("#50A3AB");
+fill("#50A3AB");
   ellipse(75, 50, 90, 35, 6);
+  textStyle(BOLD);
   textSize(15);
-  fill("white");
+  fill("White");
   textFont(mont);
   text("Back",51,55);
 
-  // Reset button
-  fill("#F6723A");
-  rect(600, 10, 70, 30);
-  fill("white");
-  textSize(15);
-  text("Reset", 615, 30);
+  fill("grey");
+rect(200, 80, 450, 50);
+
+fill("white");
+rect(560, 85, 60, 40, 150);
+fill("black");
+text("Reset", 570, 110);
 }
