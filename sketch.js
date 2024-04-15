@@ -113,8 +113,8 @@ function page1(){
   // textSize(30)
   // text("PAGE 1",150,70);
   // text("BACK", 250 , 360 )
-  game1Preload();
-  game1Setup();
+  //game1Preload();
+  //game1Setup();
   game1Draw();
 }
 
@@ -156,7 +156,7 @@ function distance(originX, originY){
 }
 
 function mouseClicked() {
-  if (currentScreen == 0 && ((dist(mouseX, mouseY, 93, 175) < 100))){
+  if (currentScreen == 0 && ((dist(mouseX, mouseY, 90, 170) < 100))){
     currentScreen = 1;  
   }  
   else if (currentScreen == 0 && ((dist(mouseX, mouseY, 271, 174) <= 100) ) ) {
