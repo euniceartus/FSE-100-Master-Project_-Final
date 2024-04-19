@@ -19,7 +19,7 @@ function menu() {
   background("#FADAC1");
   textSize(15);
   textFont("calibri");
-  text("(" + mouseX + ", " + mouseY + ")", 360, 380);
+  text("(" + mouseX + ", " + mouseY + ")", 360, 380); //mouse tracker
  
   fill("#50A3AB");
   ellipse(75, 50, 90, 35, 6);
@@ -113,8 +113,7 @@ function page1(){
   // textSize(30)
   // text("PAGE 1",150,70);
   // text("BACK", 250 , 360 )
-  //game1Preload();
-  //game1Setup();
+  game1Setup(); 
   game1Draw();
 }
 
@@ -135,7 +134,7 @@ function page3(){
   // textSize(30)
   // text("PAGE 3",150,70);
   // text("BACK", 250 , 360 );
-  game3Preload();
+  //game3Preload();
   game3Setup();
   game3Draw();
    
@@ -155,6 +154,7 @@ function distance(originX, originY){
  
 }
 
+//home page 
 function mouseClicked() {
   if (currentScreen == 0 && ((dist(mouseX, mouseY, 90, 170) < 100))){
     currentScreen = 1;  

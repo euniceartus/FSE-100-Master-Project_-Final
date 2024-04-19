@@ -63,7 +63,6 @@ function mouseDragged() {
 }
 
 function mouseReleased() {
-  
   drawing = false;
 }
 
