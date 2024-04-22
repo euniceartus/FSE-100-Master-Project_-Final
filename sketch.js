@@ -32,7 +32,7 @@ function menu() {
   textSize(27);
   fill("black")
   textStyle(BOLD);
-  text("Menu!",315,50);
+  text("Menu",315,50);
  
   fill("#F6723A")
   rect1 = rect(25,100,150,150);
@@ -115,6 +115,7 @@ function page1(){
   // text("BACK", 250 , 360 )
   game1Setup(); 
   game1Draw();
+  mouseClicked1();
 }
 
 function page2(){
