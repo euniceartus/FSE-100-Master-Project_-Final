@@ -11,7 +11,7 @@ function game1Setup() {
 }
 
 function game1Draw() {
-  background("#FADAC1");
+  background(0);
 
   fill("#50A3AB");
   ellipse(75, 50, 90, 35, 6);
@@ -79,7 +79,7 @@ class Tile {
     this.y = y;
     this.size = size;
     this.speed = speed;
-    this.color = "#F6723A";
+    this.color = "white";
   }
 
   update() {
